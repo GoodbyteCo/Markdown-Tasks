@@ -1,0 +1,100 @@
+main = {
+    SOI
+    ~ task*
+    ~ EOI
+}
+
+task = {
+    "-" ~ checkbox ~ series? ~ date?
+}
+
+series = {
+	  time ~ text ~ importance
+    | time ~ importance ~ text
+    | text ~ importance ~ time
+    | text ~ time ~ importance
+    | importance ~ time ~ text
+    | importance ~ text ~ time
+    | text ~ importance
+    | text ~ time
+    | time ~ text
+    | time ~ importance
+    | importance ~ text
+    | importance ~ time
+    | text
+    | time
+    | importance
+}
+
+time = @{
+    timestart ~ timeend
+}
+
+timestart = @{
+    ("@") ~ ASCII_NONZERO_DIGIT{1,2}
+    | ("@") ~ ("0") ~ ASCII_DIGIT
+}
+
+timeend = @{
+    twevlehour
+    | ":" ~ ASCII_DIGIT{1,2} ~ twevlehour? 
+}
+
+twevlehour = {
+    ^"am" | ^"pm"
+}
+
+importance = {
+    "!"+
+}
+
+checkbox = {
+    finished | unfinished | defered
+}
+
+finished = @{
+    "[" ~ done ~ "]"
+}
+
+unfinished = {
+    "[ ]"
+}
+
+defered = {
+    "->]"
+
+}
+
+done = {
+    "-" | "+" | ^"x" | ^"v" | "@" | "#" | "~" | "√" | "✓"
+}
+
+date = @{
+    "(" ~ year ~ month ~ day ~ ")"
+}
+
+year = @{
+    ASCII_DIGIT{4} ~ "-"
+}
+
+month = @{
+     (("0" ~ ASCII_NONZERO_DIGIT) | ("1" ~ ("1" | "2"))) ~ "-"
+}
+
+day = @{
+    (('0'..'2')  ~ ASCII_NONZERO_DIGIT) | ("3" ~ ("0" | "1"))
+}
+
+text = @{
+    word+
+}
+
+word = { 
+    allowedchars+ ~ WHITESPACE+
+}
+
+allowedchars = {
+    ASCII_ALPHANUMERIC | "," | "." | ";" | ":" | "?"
+}
+
+WHITESPACE = _{ " " | "\n"  }
