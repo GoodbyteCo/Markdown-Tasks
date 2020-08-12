@@ -42,7 +42,7 @@ Tasks that have been pulled from previous times can be written as: `->]`, but sh
 Tasks that have been pushed to later are written as: `[->`, and create an `<input type="checkbox" disabled>` element.
 A completed task has a checked checkbox, and is written as: `[*]`. This produces an `<input type="checkbox" checked>`.
 ```
-- [*] Unfinished todo
+- [*] Completed todo
 ```
 You can also use `-`, `+`, `x`, `v`, `•`, `@`, `#`, `√`, `~`, or `✓` to mark a box as checked.
 ```
