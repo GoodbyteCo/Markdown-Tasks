@@ -3,6 +3,8 @@
 This document is a syntax for todo-lists in Markdown. It proposes a standard that integrates task date, time, and importance. Like [Gruber's original spec](https://daringfireball.net/projects/markdown/), this syntax aims to be readable as-is.
 > a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.
 
+<br><br>
+
 - [Structure](https://github.com/qjack001/Markdown-Tasks#structure)
 - - [The Checkbox](https://github.com/qjack001/Markdown-Tasks#the-checkbox)
 - - [Text](https://github.com/qjack001/Markdown-Tasks#text)
