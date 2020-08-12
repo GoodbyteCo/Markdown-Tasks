@@ -3,21 +3,30 @@
 This document is a syntax for todo-lists in Markdown. It proposes a standard that integrates task date, time, and importance. Like [Gruber's original spec](https://daringfireball.net/projects/markdown/), this syntax aims to be readable as-is.
 > a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.
 
+- [Structure](https://github.com/qjack001/Markdown-Tasks#structure)
+- - [The Checkbox](https://github.com/qjack001/Markdown-Tasks#the-checkbox)
+- - [Text](https://github.com/qjack001/Markdown-Tasks#text)
+- - [Importance](https://github.com/qjack001/Markdown-Tasks#importance)
+- - [Timing](https://github.com/qjack001/Markdown-Tasks#timing)
+- - [Date](https://github.com/qjack001/Markdown-Tasks#date)
+- [Examples](https://github.com/qjack001/Markdown-Tasks#examples)
+
+
 ## Structure
 
-A todo-item, like a Markdown list-item, should take up one line. They begin with a hyphen `-` (so that they render as list-items in standard Markdown), followed by the [Checkbox](.#The-Checkbox), followed by a space. Everything else (text, importance, time, and date) is optional, and can occurr in any order—with the exception of the date, which must come last.
+A todo-item, like a Markdown list-item, should take up one line. They begin with a hyphen `-` (so that they render as list-items in standard Markdown), followed by the [Checkbox](https://github.com/qjack001/Markdown-Tasks#the-checkbox), followed by a space. Everything else (text, importance, time, and date) is optional, and can occurr in any order—with the exception of the date, which must come last.
 
 ```
 - <checkbox> [<text>, <importance>, <time>, <date>]
 ```
 
-The checkbox is most often written as two square-brackets with a space in-between `[ ]` (see [Checkbox syntax](.#The-Checkbox) for all options). Importance is denoted as a series of exclemation points `!`, from none (least urgent) to three (most urgent). Time, which refrences what time the item occurs or needs to occur by (**not** the duration of the item), is denoted with the at-symbol `@`. The date should be formatted as `YYYY-MM-DD`, and wraped in parentheses `(...)`.
+The checkbox is most often written as two square-brackets with a space in-between `[ ]` (see [Checkbox syntax](https://github.com/qjack001/Markdown-Tasks#the-checkbox) for all options). [Importance](https://github.com/qjack001/Markdown-Tasks#importance) is denoted as a series of exclemation points `!`, from none (least urgent) to three (most urgent). [Timing](https://github.com/qjack001/Markdown-Tasks#timing), which refrences what time the item occurs or needs to occur by (**not** the duration of the item), is denoted with the at-symbol `@`. The [date](https://github.com/qjack001/Markdown-Tasks#date) should be formatted as `YYYY-MM-DD`, and wraped in parentheses `(...)`.
 
 ```
 - [ ] Example todo item !! @8pm (2020-08-11)
 ```
 
-## The Checkbox
+### The Checkbox
 
 An empty checkbox is written as: `[ ]`. This should produce an `<input type="checkbox">` element.
 ```
@@ -40,14 +49,14 @@ You can also use `-`, `+`, `x`, `v`, `•`, `@`, `#`, `√`, `~`, or `✓` to ma
 - [@] Everything is done
 ```
 
-## Text
+### Text
 
 The text of a todo-item can contain inline Markdown formatting (**bold**, *italic*, [links](https://itty.bitty.site/#a.html/data:text/html;charset=utf-8;bxze64,XQAAAAIBAQAAAAAAAAAeCEUG0O+oKBdZ2an16qclPsVsLFhs2pzAN35/bHmc6Ddvq8IM4lbOVrZC5BW5l5dG325bCokrtxIjlYLBkr75n38PgebbjPKZcMZMotzv8FTXMx24PkQix6dfYYbsceNOzuogCV3U9EM/hoEJecoR5JILpdVhnqsFU0CH7kUqAL/rRZ0M+rIMqPgkg90WZTXTvAzvh2xq8/wt4efihibwnWzBfQLw5Q+S7K+g+Re4o9bUmdX1eM3wwH1WXf/wsQjA), `code`).
 ```
 - [ ] Get this one done *now*
 ```
 
-## Importance
+### Importance
 
 The urgency of a task can be set a one of four levels: none, low, medium, and high. This is written as zero, one, two, or three exclamaition points in a row, repectivly. The exclamation points can come before or after the text (but not within the text), and a seperating space is optional.
 ```
@@ -57,7 +66,7 @@ The urgency of a task can be set a one of four levels: none, low, medium, and hi
 - [*] Not at all important
 ```
 
-## Timing
+### Timing
 
 Sometimes tasks need to happen at a certain time (like meetings), or before a certain time (like schoolwork). The time a task occurs at can be set by writting an at-symbol `@` followed by the time (no spaces). The time can be written with or without minutes, and with or with out the "AM/PM" (note that if there is no AM or PM, 24-hour time is assumed).
 
@@ -68,7 +77,7 @@ Sometimes tasks need to happen at a certain time (like meetings), or before a ce
 - [ ] Or 24-hour @18:00
 ```
 
-## Date
+### Date
 
 The date the task is due can be added at the end. It must follow `(YYYY-MM-DD)` format.
 
