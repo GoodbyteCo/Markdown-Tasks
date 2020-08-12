@@ -9,7 +9,7 @@ task = {
 }
 
 series = {
-	  time ~ text ~ importance
+	time ~ text ~ importance
     | time ~ importance ~ text
     | text ~ importance ~ time
     | text ~ time ~ importance
