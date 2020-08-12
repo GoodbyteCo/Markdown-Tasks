@@ -49,7 +49,7 @@ importance = {
 }
 
 checkbox = {
-    finished | unfinished | defered
+    finished | unfinished | defered | frombefore
 }
 
 finished = @{
@@ -61,12 +61,15 @@ unfinished = {
 }
 
 defered = {
-    "->]"
+    "[->"
+}
 
+frombefore = {
+    "->]"
 }
 
 done = {
-    "-" | "+" | ^"x" | ^"v" | "@" | "#" | "~" | "√" | "✓"
+    "-" | "+" | ^"x" | ^"v" | "@" | "#" | "~" | "√" | "✓" | "*"
 }
 
 date = @{
