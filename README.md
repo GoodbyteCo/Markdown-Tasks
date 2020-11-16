@@ -6,11 +6,11 @@ This document is a syntax for todo-lists in Markdown. It proposes a standard tha
 <br>
 
 - [Structure](https://github.com/qjack001/Markdown-Tasks#structure)
-- - [The Checkbox](https://github.com/qjack001/Markdown-Tasks#the-checkbox)
-- - [Text](https://github.com/qjack001/Markdown-Tasks#text)
-- - [Importance](https://github.com/qjack001/Markdown-Tasks#importance)
-- - [Timing](https://github.com/qjack001/Markdown-Tasks#timing)
-- - [Date](https://github.com/qjack001/Markdown-Tasks#date)
+  - [The Checkbox](https://github.com/qjack001/Markdown-Tasks#the-checkbox)
+  - [Text](https://github.com/qjack001/Markdown-Tasks#text)
+  - [Importance](https://github.com/qjack001/Markdown-Tasks#importance)
+  - [Timing](https://github.com/qjack001/Markdown-Tasks#timing)
+  - [Date](https://github.com/qjack001/Markdown-Tasks#date)
 - [Examples](https://github.com/qjack001/Markdown-Tasks#examples)
 
 <br>
