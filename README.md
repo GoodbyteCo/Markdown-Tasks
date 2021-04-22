@@ -5,13 +5,14 @@ This document is a syntax for todo-lists in Markdown. It proposes a standard tha
 
 <br>
 
-- [Structure](https://github.com/qjack001/Markdown-Tasks#structure)
-  - [The Checkbox](https://github.com/qjack001/Markdown-Tasks#the-checkbox)
-  - [Text](https://github.com/qjack001/Markdown-Tasks#text)
-  - [Importance](https://github.com/qjack001/Markdown-Tasks#importance)
-  - [Timing](https://github.com/qjack001/Markdown-Tasks#timing)
-  - [Date](https://github.com/qjack001/Markdown-Tasks#date)
-- [Examples](https://github.com/qjack001/Markdown-Tasks#examples)
+- [Structure](#structure)
+  - [The Checkbox](#the-checkbox)
+  - [Text](#text)
+  - [Importance](#importance)
+  - [Timing](#timing)
+  - [Date](#date)
+- [Examples](#examples)
+- [In Use](#in-use)
 
 <br>
 
@@ -100,3 +101,7 @@ Here are a handful of examples of correct Markdown task items:
 - [ ] Meet Marty for dinner @6:30pm (2020-08-12)
 - [-> Do something later
 ```
+
+## In Use
+
+- [todo: a tiny command-line todo-list app](https://github.com/qjack001/todo)
